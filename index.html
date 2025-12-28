@@ -85,6 +85,7 @@
             border-bottom: 2px solid var(--light-border);
         }
 
+        /* Main Heading Gradient */
         .header h1 {
             font-size: 1.6rem;
             font-weight: 700;
@@ -109,6 +110,102 @@
             .header h1 {
                 font-size: 2rem;
                 text-align: left;
+            }
+        }
+
+        /* Section Title Gradient - Matching Main Heading */
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--dark-border);
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #b794f4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.light-mode .section-title {
+            background: linear-gradient(90deg, #1e40af 0%, #059669 25%, #3b82f6 50%, #10b981 75%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            border-bottom: 1px solid var(--light-border);
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Sub-headings gradient */
+        .intraday-container h3 {
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.1rem;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 25%, #f093fb 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.light-mode .intraday-container h3 {
+            background: linear-gradient(90deg, #1e40af 0%, #059669 25%, #3b82f6 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Level box labels gradient */
+        .level-label {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.light-mode .level-label {
+            background: linear-gradient(90deg, #1e40af 0%, #059669 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Summary box titles gradient */
+        .summary-title {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.light-mode .summary-title {
+            background: linear-gradient(90deg, #1e40af 0%, #059669 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @media (min-width: 768px) {
+            .summary-title {
+                font-size: 0.9rem;
+                margin-bottom: 10px;
+            }
+            
+            .level-label {
+                font-size: 1rem;
             }
         }
 
@@ -313,29 +410,6 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
-        .section-title {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: var(--dark-text);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--dark-border);
-        }
-
-        @media (min-width: 768px) {
-            .section-title {
-                font-size: 1.5rem;
-            }
-        }
-
-        body.light-mode .section-title {
-            color: var(--light-text);
-            border-bottom: 1px solid var(--light-border);
-        }
-
         .trading-signals {
             display: grid;
             grid-template-columns: 1fr;
@@ -504,39 +578,6 @@
             border-color: rgba(220, 38, 38, 0.4);
         }
 
-        .level-label {
-            font-size: 0.95rem;
-            color: var(--dark-muted);
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-
-        @media (min-width: 768px) {
-            .level-label {
-                font-size: 1rem;
-            }
-        }
-
-        body.light-mode .level-label {
-            color: var(--light-muted);
-        }
-
-        .breakout-label {
-            color: var(--dark-positive);
-        }
-
-        body.light-mode .breakout-label {
-            color: var(--light-positive);
-        }
-
-        .breakdown-label {
-            color: var(--dark-negative);
-        }
-
-        body.light-mode .breakdown-label {
-            color: var(--light-negative);
-        }
-
         .level-value {
             font-size: 1.6rem;
             font-weight: 700;
@@ -606,24 +647,6 @@
 
         body.light-mode .summary-box:hover {
             border-color: var(--light-emerald-blue);
-        }
-
-        .summary-title {
-            font-size: 0.85rem;
-            color: var(--dark-muted);
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        @media (min-width: 768px) {
-            .summary-title {
-                font-size: 0.9rem;
-                margin-bottom: 10px;
-            }
-        }
-
-        body.light-mode .summary-title {
-            color: var(--light-muted);
         }
 
         .summary-value {
@@ -914,30 +937,29 @@
             animation: fadeIn 0.5s ease-out forwards;
         }
 
-        /* Clean gradient headings for all sections */
-        .gradient-heading {
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+        /* Gradient for signal info text */
+        .signal-info {
+            color: var(--dark-muted);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        body.light-mode .signal-info {
+            color: var(--light-muted);
+        }
+
+        /* Gradient for level box descriptions */
+        .level-description {
+            font-size: 0.85rem;
+            margin-top: 5px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        body.light-mode .gradient-heading {
-            background: linear-gradient(90deg, #1e40af, #059669, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section-title i {
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        body.light-mode .section-title i {
-            background: linear-gradient(90deg, #1e40af, #059669);
+        body.light-mode .level-description {
+            background: linear-gradient(90deg, #1e40af 0%, #059669 50%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -961,7 +983,7 @@
                 </label>
                 <input type="number" id="basePrice" class="input-field" 
                        placeholder="Enter base price" 
-                       value="114.33" step="0.01">
+                       value="100" step="0.01">
             </div>
             
             <div class="input-group">
@@ -982,21 +1004,21 @@
                 <div class="trading-signals">
                     <div class="signal-box buy-signal">
                         <div class="signal-header">
-                            <i class="fas fa-arrow-up"></i> Buy Signal
+                            <i class="fas fa-arrow-up"></i> Buy Above
                         </div>
-                        <div class="signal-price" id="buyPrice">114.33</div>
-                        <div class="signal-info" style="color: var(--dark-muted); font-size: 0.9rem; margin-top: 10px;">
-                            Stop Loss: <span id="buyStopLoss" style="color: var(--dark-text); font-weight: 600;">110.79</span>
+                        <div class="signal-price" id="buyPrice">102.60</div>
+                        <div class="signal-info">
+                            Stop Loss: <span id="buyStopLoss" style="color: var(--dark-text); font-weight: 600;">97.39</span>
                         </div>
                     </div>
                     
                     <div class="signal-box sell-signal">
                         <div class="signal-header">
-                            <i class="fas fa-arrow-down"></i> Sell Signal
+                            <i class="fas fa-arrow-down"></i> Sell Below
                         </div>
-                        <div class="signal-price" id="sellPrice">110.79</div>
-                        <div class="signal-info" style="color: var(--dark-muted); font-size: 0.9rem; margin-top: 10px;">
-                            Stop Loss: <span id="sellStopLoss" style="color: var(--dark-text); font-weight: 600;">114.33</span>
+                        <div class="signal-price" id="sellPrice">97.39</div>
+                        <div class="signal-info">
+                            Stop Loss: <span id="sellStopLoss" style="color: var(--dark-text); font-weight: 600;">102.60</span>
                         </div>
                     </div>
                 </div>
@@ -1004,22 +1026,22 @@
                 <!-- Breakout & Breakdown Levels -->
                 <div class="breakout-breakdown-levels">
                     <div class="level-box breakout-box">
-                        <div class="level-label breakout-label">
+                        <div class="level-label">
                             <i class="fas fa-arrow-trend-up"></i> Breakout Level
                         </div>
-                        <div class="level-value" id="breakoutLevel">121.00</div>
-                        <div style="font-size: 0.85rem; color: var(--dark-muted); margin-top: 5px;">
-                            Buy above this level
+                        <div class="level-value" id="breakoutLevel">105.80</div>
+                        <div class="level-description">
+                            Next resistance after entry
                         </div>
                     </div>
                     
                     <div class="level-box breakdown-box">
-                        <div class="level-label breakdown-label">
+                        <div class="level-label">
                             <i class="fas fa-arrow-trend-down"></i> Breakdown Level
                         </div>
-                        <div class="level-value" id="breakdownLevel">110.79</div>
-                        <div style="font-size: 0.85rem; color: var(--dark-muted); margin-top: 5px;">
-                            Sell below this level
+                        <div class="level-value" id="breakdownLevel">96.90</div>
+                        <div class="level-description">
+                            Next support after entry
                         </div>
                     </div>
                 </div>
@@ -1034,32 +1056,32 @@
                 <div class="levels-summary">
                     <div class="summary-box">
                         <div class="summary-title">Breakout Target 1</div>
-                        <div class="summary-value" id="breakoutT1">132.25</div>
+                        <div class="summary-value" id="breakoutT1">117.64</div>
                     </div>
                     
                     <div class="summary-box">
                         <div class="summary-title">Breakout Target 2</div>
-                        <div class="summary-value" id="breakoutT2">144.00</div>
+                        <div class="summary-value" id="breakoutT2">129.96</div>
                     </div>
                     
                     <div class="summary-box">
                         <div class="summary-title">Breakout Target 3</div>
-                        <div class="summary-value" id="breakoutT3">156.25</div>
+                        <div class="summary-value" id="breakoutT3">143.10</div>
                     </div>
                     
                     <div class="summary-box">
                         <div class="summary-title">Breakdown Target 1</div>
-                        <div class="summary-value" id="breakdownT1">110.25</div>
+                        <div class="summary-value" id="breakdownT1">87.95</div>
                     </div>
                     
                     <div class="summary-box">
                         <div class="summary-title">Breakdown Target 2</div>
-                        <div class="summary-value" id="breakdownT2">100.00</div>
+                        <div class="summary-value" id="breakdownT2">77.44</div>
                     </div>
                     
                     <div class="summary-box">
                         <div class="summary-title">Breakdown Target 3</div>
-                        <div class="summary-value" id="breakdownT3">90.25</div>
+                        <div class="summary-value" id="breakdownT3">67.80</div>
                     </div>
                 </div>
             </div>
@@ -1073,8 +1095,8 @@
                 <div class="intraday-container">
                     <!-- Upside Targets -->
                     <div>
-                        <h3 style="color: var(--dark-positive); margin-bottom: 15px; text-align: center; font-size: 1.1rem;">
-                            <i class="fas fa-arrow-up"></i> Upside Targets
+                        <h3>
+                            <i class="fas fa-arrow-up"></i> Upside Targets (After Buy Above)
                         </h3>
                         <div class="table-container">
                             <table class="targets-table" id="upsideTargetsTable">
@@ -1085,7 +1107,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="upsideTargets">
-                                    <!-- Upside targets will be inserted here -->
+                                    <!-- Upside targets will be inserted here starting from T1 -->
                                 </tbody>
                             </table>
                         </div>
@@ -1093,8 +1115,8 @@
                     
                     <!-- Downside Targets -->
                     <div>
-                        <h3 style="color: var(--dark-negative); margin-bottom: 15px; text-align: center; font-size: 1.1rem;">
-                            <i class="fas fa-arrow-down"></i> Downside Targets
+                        <h3>
+                            <i class="fas fa-arrow-down"></i> Downside Targets (After Sell Below)
                         </h3>
                         <div class="table-container">
                             <table class="targets-table" id="downsideTargetsTable">
@@ -1105,7 +1127,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="downsideTargets">
-                                    <!-- Downside targets will be inserted here -->
+                                    <!-- Downside targets will be inserted here starting from DT1 -->
                                 </tbody>
                             </table>
                         </div>
@@ -1145,40 +1167,6 @@
         // Intraday targets containers
         const upsideTargets = document.getElementById('upsideTargets');
         const downsideTargets = document.getElementById('downsideTargets');
-        
-        // Intraday targets configuration (percentage differences from base)
-        const upsidePercentages = [
-            { target: 'T1', percent: 0.52 },
-            { target: 'T2', percent: 2.61 },
-            { target: 'T3', percent: 3.21 },
-            { target: 'T4', percent: 4.72 },
-            { target: 'T5', percent: 9.73 },
-            { target: 'T6', percent: 11.20 },
-            { target: 'T7', percent: 13.41 },
-            { target: 'T8', percent: 15.63 },
-            { target: 'T9', percent: 17.82 },
-            { target: 'T10', percent: 18.50 },
-            { target: 'T11', percent: 19.00 },
-            { target: 'T12', percent: 19.50 },
-            { target: 'T13', percent: 20.00 }
-        ];
-        
-        // Downside targets - mirror of upside but negative
-        const downsidePercentages = [
-            { target: 'DT1', percent: -0.52 },
-            { target: 'DT2', percent: -2.61 },
-            { target: 'DT3', percent: -3.21 },
-            { target: 'DT4', percent: -4.72 },
-            { target: 'DT5', percent: -9.73 },
-            { target: 'DT6', percent: -11.20 },
-            { target: 'DT7', percent: -13.41 },
-            { target: 'DT8', percent: -15.63 },
-            { target: 'DT9', percent: -17.82 },
-            { target: 'DT10', percent: -18.50 },
-            { target: 'DT11', percent: -19.00 },
-            { target: 'DT12', percent: -19.50 },
-            { target: 'DT13', percent: -20.00 }
-        ];
         
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
@@ -1238,14 +1226,16 @@
                 el.classList.add('magic-appear');
             });
             
-            // 1. TRADING SIGNALS
-            const buySignalPrice = basePrice;
-            const sellSignalPrice = (basePrice * 0.969).toFixed(2);
+            // 1. CALCULATE PRACTICAL ENTRY LEVELS
+            const buyAbovePrice = basePrice * 1.026;
+            const sellBelowPrice = basePrice * 0.9739;
             
-            buyPrice.textContent = formatPrice(buySignalPrice);
-            buyStopLossEl.textContent = formatPrice(sellSignalPrice);
-            sellPrice.textContent = formatPrice(sellSignalPrice);
-            sellStopLossEl.textContent = formatPrice(buySignalPrice);
+            buyPrice.textContent = formatPrice(buyAbovePrice);
+            sellPrice.textContent = formatPrice(sellBelowPrice);
+            
+            // Stop Loss calculations
+            buyStopLossEl.textContent = formatPrice(sellBelowPrice);
+            sellStopLossEl.textContent = formatPrice(buyAbovePrice);
             
             // 2. BREAKOUT & BREAKDOWN LEVELS
             const breakoutLevelValue = basePrice * 1.058;
@@ -1256,17 +1246,17 @@
             
             // 3. POSITIONAL TARGETS
             const sqrtBreakout = Math.sqrt(breakoutLevelValue);
-            
             const positionalBreakoutPrices = [
-                Math.pow(sqrtBreakout + 0.5, 2),
                 Math.pow(sqrtBreakout + 1.0, 2),
-                Math.pow(sqrtBreakout + 1.5, 2)
+                Math.pow(sqrtBreakout + 2.0, 2),
+                Math.pow(sqrtBreakout + 3.0, 2)
             ];
             
+            const sqrtBreakdown = Math.sqrt(breakdownLevelValue);
             const positionalBreakdownPrices = [
-                Math.pow(sqrtBreakout - 0.5, 2),
-                Math.pow(sqrtBreakout - 1.0, 2),
-                Math.pow(sqrtBreakout - 1.5, 2)
+                Math.pow(sqrtBreakdown - 1.0, 2),
+                Math.pow(sqrtBreakdown - 2.0, 2),
+                Math.pow(sqrtBreakdown - 3.0, 2)
             ];
             
             // Update breakout targets
@@ -1279,8 +1269,8 @@
             breakdownT2.textContent = formatPrice(positionalBreakdownPrices[1]);
             breakdownT3.textContent = formatPrice(positionalBreakdownPrices[2]);
             
-            // 4. INTRADAY TARGETS
-            updateIntradayTargets(basePrice);
+            // 4. INTRADAY TARGETS (Starting from T1/DT1 after entry)
+            updateIntradayTargets(basePrice, buyAbovePrice, sellBelowPrice);
             
             // Remove animation classes after animation completes
             setTimeout(() => {
@@ -1290,7 +1280,7 @@
             }, 500);
         }
         
-        function updateIntradayTargets(basePrice) {
+        function updateIntradayTargets(basePrice, buyAbovePrice, sellBelowPrice) {
             // Clear previous targets
             upsideTargets.innerHTML = '';
             downsideTargets.innerHTML = '';
@@ -1299,49 +1289,78 @@
             const positiveBg = isLightMode ? 'rgba(5, 150, 105, 0.05)' : 'rgba(16, 185, 129, 0.05)';
             const negativeBg = isLightMode ? 'rgba(220, 38, 38, 0.05)' : 'rgba(239, 68, 68, 0.05)';
             
-            // Calculate and display upside targets
-            upsidePercentages.forEach(item => {
-                if (item.percent <= 20) {
-                    const targetPrice = basePrice * (1 + item.percent / 100);
-                    
+            // INTRADAY TARGETS AFTER ENTRY
+            const upsideTargetsAfterEntry = [
+                { target: 'T1', price: buyAbovePrice * 1.00595 }, // +0.595% from Buy Above = 103.21
+                { target: 'T2', price: basePrice * 1.0472 },      // +4.72% from base = 104.72
+                { target: 'T3', price: basePrice * 1.0973 },      // +9.73% from base = 109.73
+                { target: 'T4', price: basePrice * 1.1120 },      // +11.20% from base = 111.20
+                { target: 'T5', price: basePrice * 1.1341 },      // +13.41% from base = 113.41
+                { target: 'T6', price: basePrice * 1.1563 },      // +15.63% from base = 115.63
+                { target: 'T7', price: basePrice * 1.1782 },      // +17.82% from base = 117.82
+                { target: 'T8', price: basePrice * 1.1850 },      // +18.50% from base = 118.50
+                { target: 'T9', price: basePrice * 1.1900 },      // +19.00% from base = 119.00
+                { target: 'T10', price: basePrice * 1.1950 },     // +19.50% from base = 119.50
+                { target: 'T11', price: basePrice * 1.2000 }      // +20.00% from base = 120.00
+            ];
+            
+            const downsideTargetsAfterEntry = [
+                { target: 'DT1', price: sellBelowPrice * 0.99385 }, // -0.615% from Sell Below = 96.79
+                { target: 'DT2', price: basePrice * 0.9528 },       // -4.72% from base = 95.28
+                { target: 'DT3', price: basePrice * 0.9027 },       // -9.73% from base = 90.27
+                { target: 'DT4', price: basePrice * 0.8880 },       // -11.20% from base = 88.80
+                { target: 'DT5', price: basePrice * 0.8659 },       // -13.41% from base = 86.59
+                { target: 'DT6', price: basePrice * 0.8437 },       // -15.63% from base = 84.37
+                { target: 'DT7', price: basePrice * 0.8218 },       // -17.82% from base = 82.18
+                { target: 'DT8', price: basePrice * 0.8150 },       // -18.50% from base = 81.50
+                { target: 'DT9', price: basePrice * 0.8100 },       // -19.00% from base = 81.00
+                { target: 'DT10', price: basePrice * 0.8050 },      // -19.50% from base = 80.50
+                { target: 'DT11', price: basePrice * 0.8000 }       // -20.00% from base = 80.00
+            ];
+            
+            // Display upside targets (only show targets above Buy Above)
+            let targetNumber = 1;
+            upsideTargetsAfterEntry.forEach(item => {
+                if (item.price > buyAbovePrice) {
                     const row = document.createElement('tr');
                     row.classList.add('magic-appear');
-                    row.style.animationDelay = `${item.percent * 0.02}s`;
+                    row.style.animationDelay = `${(targetNumber - 1) * 0.05}s`;
                     
                     // Add highlight to important rows
-                    if (item.target === 'T1' || item.target === 'T9') {
+                    if (item.target === 'T1' || item.target === 'T7') {
                         row.style.backgroundColor = positiveBg;
                     }
                     
                     row.innerHTML = `
                         <td class="target-cell">${item.target}</td>
-                        <td class="price-cell">${formatPrice(targetPrice)}</td>
+                        <td class="price-cell">${formatPrice(item.price)}</td>
                     `;
                     
                     upsideTargets.appendChild(row);
+                    targetNumber++;
                 }
             });
             
-            // Calculate and display downside targets (mirror of upside)
-            downsidePercentages.forEach(item => {
-                if (item.percent >= -20) {
-                    const targetPrice = basePrice * (1 + item.percent / 100);
-                    
+            // Display downside targets (only show targets below Sell Below)
+            let downTargetNumber = 1;
+            downsideTargetsAfterEntry.forEach(item => {
+                if (item.price < sellBelowPrice) {
                     const row = document.createElement('tr');
                     row.classList.add('magic-appear');
-                    row.style.animationDelay = `${Math.abs(item.percent) * 0.02}s`;
+                    row.style.animationDelay = `${(downTargetNumber - 1) * 0.05}s`;
                     
                     // Add highlight to important rows
-                    if (item.target === 'DT1' || item.target === 'DT9') {
+                    if (item.target === 'DT1' || item.target === 'DT7') {
                         row.style.backgroundColor = negativeBg;
                     }
                     
                     row.innerHTML = `
                         <td class="target-cell">${item.target}</td>
-                        <td class="price-cell">${formatPrice(targetPrice)}</td>
+                        <td class="price-cell">${formatPrice(item.price)}</td>
                     `;
                     
                     downsideTargets.appendChild(row);
+                    downTargetNumber++;
                 }
             });
         }
